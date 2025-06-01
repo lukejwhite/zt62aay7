@@ -36,7 +36,7 @@ class AddressServiceTest extends TestCase
             ], 200),
         ]);
 
-        $response = $this->getJson('/addresses?postcode=' . $postcode);
+        $response = $this->getJson('/api/addresses?postcode=' . $postcode);
 
         $response->assertStatus(200)
             ->assertJsonCount(2)
